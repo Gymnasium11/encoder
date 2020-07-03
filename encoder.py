@@ -15,7 +15,7 @@ root.title('Шифратор 2.0')
 if os.name == 'nt':
     myappid = 'mycompany.myproduct.subproduct.version'  # arbitrary string
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
-root.iconbitmap('encode.ico')
+root.iconbitmap('encode2.ico')
 
 # RadioButtons
 
