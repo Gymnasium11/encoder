@@ -4,7 +4,11 @@ from tkinter import *
 import tkinter.ttk as ttk
 
 # window settings
+
 root = Tk()
+root.resizable(width=False, height=False)
+root.geometry('770x500')
+root.title('Шифратор 2.0')
 
 # icons
 
@@ -12,10 +16,6 @@ if os.name == 'nt':
     myappid = 'mycompany.myproduct.subproduct.version'  # arbitrary string
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 root.iconbitmap('encode.ico')
-
-root.resizable(width=False, height=False)
-root.geometry('770x500')
-root.title('Шифратор 2.0')
 
 # RadioButtons
 
