@@ -43,7 +43,7 @@ def selected(self):
 
 input = Text(width=36, height=20).grid(row=1, column=0, padx="10 0", pady="40 0")
 output = Text(width=36, height=20).grid(row=1, column=2, padx="21 0", pady="40 0")
-key = Text(width=3, font="helvetica 30 bold", height=1).grid(row=1, column=1, pady="100 0", padx="14 0")
+key = Text(width=7, font="helvetica 22 bold", height=1).grid(row=1, column=1, pady="100 0", padx="14 0")
 
 # Buttons
 
