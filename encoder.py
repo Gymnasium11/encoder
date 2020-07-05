@@ -43,13 +43,21 @@ ttk.Button( text = 'Расшифровать',width=19 ).grid(row=1, column=1, p
 ttk.Button( text = 'Вставить', width=19).grid(row=3, column=0, pady="30 0")
 ttk.Button( text = 'Вставить', width=19).grid(row=3, column=2, sticky=W, pady="30 0", padx="30 0")
 ttk.Button( text = 'Копировать', width=19).grid(row=3, column=2, padx="180 0", pady="30 0")
+ttk.Button( text = 'Очистить', width=19).grid(row=1, column=1, padx="20 0", pady="260 0")
 
 # Label
 
 ttk.Label(root, text="Ключ", font='helvetica 20 bold').grid(row=1, column=1, padx="10 0")
 
+#Clear
 
+def clear(x, list):
 
+        for i in list:
+            if i == self.result:
+                self.result['text'] = '0'
+            else:
+                i.delete(0, END)
 
 
 
