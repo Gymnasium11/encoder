@@ -3,6 +3,14 @@ import ctypes
 from tkinter import *
 import tkinter.ttk as ttk
 
+
+# clear function
+
+def clear(*text_list):
+    for i in text_list:
+        i.delete(0.0, END)
+
+
 # window settings
 
 root = Tk()
@@ -41,46 +49,31 @@ def selected(self):
 
 # Entries and Texts
 
-input = Text(width=36, height=20).grid(row=1, column=0, padx="10 0", pady="40 0")
-output = Text(width=36, height=20).grid(row=1, column=2, padx="21 0", pady="40 0")
-key = Text(width=7, font="helvetica 22 bold", height=1).grid(row=1, column=1, pady="100 0", padx="14 0")
+input = Text(width=36, height=20)
+input.grid(row=1, column=0, padx="10 0", pady="40 0")
+output = Text(width=36, height=20)
+output.grid(row=1, column=2, padx="21 0", pady="40 0")
+key = Text(width=7, font="helvetica 22 bold", height=1)
+key.grid(row=1, column=1, pady="100 0", padx="14 0")
 
 # Buttons
 
-<<<<<<< HEAD
-ttk.Button( text = 'Зашифровать',width=19 ).grid(row=1, column=1, padx="20 0", pady="0 190")
-ttk.Button( text = 'Расшифровать',width=19 ).grid(row=1, column=1, padx="20 0",pady="0 120")
-ttk.Button( text = 'Вставить', width=19).grid(row=3, column=0, pady="30 0")
-ttk.Button( text = 'Вставить', width=19).grid(row=3, column=2, sticky=W, pady="30 0", padx="30 0")
-ttk.Button( text = 'Копировать', width=19).grid(row=3, column=2, padx="180 0", pady="30 0")
-ttk.Button( text = 'Очистить', width=19).grid(row=1, column=1, padx="20 0", pady="260 0")
-=======
 ttk.Button(text='Зашифровать', width=19).grid(row=1, column=1, padx="20 0", pady="0 190")
 ttk.Button(text='Расшифровать', width=19).grid(row=1, column=1, padx="20 0", pady="0 120")
 ttk.Button(text='Вставить', width=19).grid(row=3, column=0, pady="30 0")
 ttk.Button(text='Вставить', width=19).grid(row=3, column=2, sticky=W, pady="30 0", padx="30 0")
 ttk.Button(text='Копировать', width=19).grid(row=3, column=2, padx="180 0", pady="30 0")
->>>>>>> 82bbeb9b683e6c00c778bd9bbe18e022cfbeb763
+ttk.Button(text='Очистить', width=19, command=lambda: clear(input, output, key)).grid(row=1, column=1, padx="20 0",
+                                                                                      pady="260 0")
+ttk.Button(text='Зашифровать', width=19).grid(row=1, column=1, padx="20 0", pady="0 190")
+ttk.Button(text='Расшифровать', width=19).grid(row=1, column=1, padx="20 0", pady="0 120")
+ttk.Button(text='Вставить', width=19).grid(row=3, column=0, pady="30 0")
+ttk.Button(text='Вставить', width=19).grid(row=3, column=2, sticky=W, pady="30 0", padx="30 0")
+ttk.Button(text='Копировать', width=19).grid(row=3, column=2, padx="180 0", pady="30 0")
 
 # Label
 
 ttk.Label(root, text="Ключ", font='helvetica 20 bold').grid(row=1, column=1, padx="10 0")
 
-<<<<<<< HEAD
-#Clear
-
-def clear(x, list):
-
-        for i in list:
-            if i == self.result:
-                self.result['text'] = '0'
-            else:
-                i.delete(0, END)
-
-
-
 
 root.mainloop()
-=======
-root.mainloop()
->>>>>>> 82bbeb9b683e6c00c778bd9bbe18e022cfbeb763
